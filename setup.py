@@ -34,10 +34,13 @@ setup(
         'console_scripts': [
             'selenium_automation=selenium_automation.cli:main',
         ],
+        'selenium_automation': [
+            'selenium_automation.commands=selenium_automation.commands'
+        ],
     },
     install_requires=requirements,
     license="MIT license",
-    long_description=readme + '\n\n' + history,
+    long_description=Readme + '\n\n' + history,
     include_package_data=True,
     keywords='selenium automation',
     name='selenium_automation',

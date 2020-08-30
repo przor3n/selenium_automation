@@ -15,17 +15,16 @@ from codelib.parsing.beautifulsoup import load_html
 
 def google_scenarios(scenario):
     def google_robot(phrase, driver):
-        tools = {
-            'b': Browser(driver)
-        }
+        browser = Browser(driver)
 
-        slots = {
-            'google': GoogleSearch(tools['b']),
+        tools = {
+            'b': browser,
+            'google': GoogleSearch(browser),
             'phrase': phrase
         }
 
         try:
-            runner = Runner(tools, slots, scenario)
+            runner = Runner(tools, scenario)
             runner.do()
             runner.clean()
 

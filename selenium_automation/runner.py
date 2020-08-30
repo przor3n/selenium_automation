@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import logging
-
+from selenium_automation import log
 
 class Runner:
     def __init__(self, tools, instructions):
@@ -32,7 +31,7 @@ class Runner:
                 # pass prepared environment
                 exec(self.instructions, globals(), self.environment)
             except Exception as e:
-                logging.error(e)
+                log.error(e)
                 raise e
             finally:
                 self.last_checks()

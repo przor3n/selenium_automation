@@ -1,0 +1,7 @@
+    options.add_experimental_option("prefs", {
+        "download.default_directory": tempfile.mkdtemp(),
+        "download.prompt_for_download": False,
+        "download.directory_upgrade": True,
+        'safebrowsing.enabled': False,
+        'safebrowsing.disable_download_protection': True,
+    })
